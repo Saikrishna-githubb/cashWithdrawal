@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+In this project, let's build a **Cash Withdrawal** app by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Refer to the image below:
 
-## Available Scripts
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/cash-withdrawal-output-v2.gif" alt="cash withdrawal" style="max-width:90%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
 
-In the project directory, you can run:
+### Design Files
 
-### `npm start`
+<details>
+<summary>Click to view</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/cash-withdrawal-sm-output-v2.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/cash-withdrawal-lg-output-v2.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</details>
 
-### `npm test`
+### Set Up Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+<summary>Click to view</summary>
 
-### `npm run build`
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Completion Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Functionality to be added</summary>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app must have the following functionalities
 
-### `npm run eject`
+- Initially, the balance should be **2000** rupees
+- When a denomination is clicked, then the respective value should be deducted from the balance available
+- The `CashWithdrawal` component receives the `denominationsList` as a prop. It consists of a list of denomination objects with the following properties in each denomination object
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  |  Key  | Data Type |
+  | :---: | :-------: |
+  |  id   |  Number   |
+  | value |  Number   |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<details>
+<summary>Components Structure</summary>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/cash-withdrawal-component-structure-v2.png" alt="cash withdrawal component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<details>
+<summary>Implementation Files</summary>
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Use these files to complete the implementation:
 
-### Code Splitting
+- `src/components/CashWithdrawal/index.js`
+- `src/components/CashWithdrawal/index.css`
+- `src/components/DenominationItem/index.js`
+- `src/components/DenominationItem/index.css`
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Quick Tips
 
-### Analyzing the Bundle Size
+<details>
+<summary>Click to view</summary>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The string method `slice()` extracts a section of a string and returns it as a new string, without modifying the original string
 
-### Making a Progressive Web App
+  ```js
+  const text = "The quick brown fox";
+  console.log(text.slice(0, 3)); // The
+  console.log(text.slice(2, 3)); // e
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- You can use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element
 
-### Advanced Configuration
+  ```
+    cursor: pointer;
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  <br/>
+   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
 
-### Deployment
+- You can use the below `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  ```
+    outline: none;
+  ```
 
-### `npm run build` fails to minify
+  </details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Resources
+
+<details>
+<summary>Colors</summary>
+
+<br/>
+
+<div style="background-color: #150b3e ; width: 150px; padding: 10px; color: white">Hex: #150b3e</div>
+<div style="background-color: #c7d2fe ; width: 150px; padding: 10px; color: black">Hex: #c7d2fe</div>
+<div style="background-color: #7c3aed ; width: 150px; padding: 10px; color: white">Hex: #7c3aed</div>
+<div style="background-color: #d4d2db ; width: 150px; padding: 10px; color: black">Hex: #d4d2db</div>
+<div style="background-color: #585076 ; width: 150px; padding: 10px; color: white">Hex: #585076</div>
+<div style="background-color: #382f5a ; width: 150px; padding: 10px; color: white">Hex: #382f5a</div>
+<div style="background-color: #c4c4c4 ; width: 150px; padding: 10px; color: black">Hex: #c4c4c4</div>
+
+</details>
+
+<details>
+<summary>Font-families</summary>
+
+- Roboto
+
+</details>
+
+> ### _Things to Keep in Mind_
+>
+> - All components you implement should go in the `src/components` directory.
+> - Don't change the component folder names as those are the files being imported into the tests.
+> - **Do not remove the pre-filled code**
+> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
